@@ -1,195 +1,64 @@
-body {
+/* RESET */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
     background: #f8f8f8;
+    overflow-x: hidden;
 }
 
-/* HEADER */
-header {
+/* ================= HEADER ================= */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #222;
     color: white;
-    padding: 15px;
+    padding: 20px 40px;
+}
+
+/* BRAND */
+.title {
+    flex: 1;
     text-align: center;
 }
 
-/* NAVBAR */
-nav {
-    display: flex;
-    justify-content: center;
-    background: #444;
-    padding: 12px 0;        /* more height */
-}
-
-nav a {
-    color: white;
-    padding: 14px 25px;     /* bigger clickable area */
-    text-decoration: none;
-    font-size: 18px;        /* bigger text */
-    font-weight: 500;
-}
-
-nav a:hover {
-    background: #666;
-    border-radius: 5px;
-}
-
-/* HERO */
-.hero {
-    padding: 80px 20px;
-}
-.hero {
-    background: 
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') 
-        no-repeat center/cover;
-
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-}
-.hero h1 {
-    font-size: 50px;
-}
-
-.btn {
-    background: #c49b63;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* SECTIONS */
-.section {
-    padding: 40px;
-    text-align: center;
-}
-
-/* SERVICES */
-#services h1 {
-    font-size: 36px;
+.brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
     font-weight: 700;
-    margin-bottom: 30px;
-}
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;      /* more spacing */
-    padding: 20px;
 }
 
-.card {
-    background: white;
-    padding: 30px 20px;     /* bigger */
-    border-radius: 15px;
-    font-size: 18px;        /* bigger text */
-    font-weight: 500;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    background: #c49b63;
-    color: white;
+.brand span {
+    color: #c49b63;
 }
 
-
-/* PORTFOLIO */
-.portfolio img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* CONTACT */
-.contact {
-    background: #222;
-    color: white;
-    padding: 30px;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #111;
-    color: white;
-}
-/* HEADER LAYOUT */
-.top-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #222;
-    color: white;
-    padding: 10px 20px;
-}
-
-/* CENTER TITLE */
-.title {
-    text-align: center;
-    flex: 1;
-}
-
-.title h2 {
-    margin: 0;
-}
-
-/* PERSON DETAILS */
-.person {
-    width: 200px;
-    font-size: 12px;
-    line-height: 1.4;
-}
-
-.left {
-    text-align: left;
-}
-
-.right {
-    text-align: right;
-}
-/* HEADER */
-.top-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #222;
-    color: white;
-    padding: 10px 20px;
-}
-
-/* TITLE */
-.title {
-    text-align: center;
-    flex: 1;
-}
-
-.title h2 {
-    margin: 0;
-}
-
-/* PERSON BOX */
+/* PERSON */
 .person {
     display: flex;
     align-items: center;
-    gap: 15px;
-    width: 320px;              /* increased */
-    font-size: 16px;           /* bigger text */
-    line-height: 1.7;
+    gap: 12px;
+    width: auto; /* FIXED */
 }
 
 .person img {
-    width: 90px;               /* bigger image */
-    height: 90px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #c49b63;
 }
 
 .person-info p {
-    margin: 4px 0;
+    font-size: 14px;
+    margin: 3px 0;
 }
 
-/* ADD THIS BELOW */
+/* RIGHT ALIGN */
 .right {
     justify-content: flex-end;
 }
@@ -197,50 +66,89 @@ footer {
 .right .person-info {
     text-align: right;
 }
-/* IMAGE STYLE */
-.person img {
-    width: 70px;               /* reduced for better alignment */
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #c49b63;
-}
 
-/* ALIGNMENT */
-.left {
-    text-align: left;
-}
-
-.right {
-    text-align: right;
-}
-/* SLIDER */
-.slider {
+/* ================= NAVBAR ================= */
+nav {
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    background: #444;
 }
 
-.slider img {
-    width: 80%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: opacity 0.8s ease-in-out;
+nav a {
+    color: white;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 18px;
 }
-.gallery {
+
+nav a:hover {
+    background: #666;
+}
+
+/* ================= HERO ================= */
+.hero {
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c')
+        no-repeat center/cover;
+
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.btn {
+    background: #c49b63;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* ================= SERVICES ================= */
+#services h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.services {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
 }
 
-.gallery img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
+.card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
+
+.card:hover {
+    transform: translateY(-8px);
+    background: #c49b63;
+    color: white;
+}
+
+/* ================= PORTFOLIO SCROLL ================= */
 .scroll-container {
     display: flex;
     overflow: hidden;
@@ -249,50 +157,45 @@ footer {
 }
 
 .scroll-container img {
-    width: 350px;        /* increased size */
-    height: 260px;       /* better proportion */
+    width: 350px;
+    height: 250px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 10px;
     flex-shrink: 0;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
-/* optional hover zoom (looks premium) */
 .scroll-container img:hover {
     transform: scale(1.05);
 }
-/* BRAND */
-.brand {
-    font-family: 'Poppins', sans-serif;
-    font-size: 42px;        /* increased */
-    font-weight: 700;
-    letter-spacing: 1.5px;
+
+/* ================= CONTACT ================= */
+.contact {
+    background: #222;
+    color: white;
+    padding: 30px;
 }
 
-
-
-.brand span {
-    color: #c49b63;
-}
-
-/* CENTER TITLE */
-.title {
-    flex: 1;
+/* ================= FOOTER ================= */
+footer {
+    background: #111;
+    color: white;
+    padding: 10px;
     text-align: center;
 }
-/* ================= MOBILE RESPONSIVE ================= */
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
-    /* HEADER STACK */
     .top-header {
         flex-direction: column;
-        gap: 15px;
         text-align: center;
+        gap: 15px;
     }
 
     .person {
-        width: 100%;
-        justify-content: center;
+        flex-direction: column;
+        text-align: center;
     }
 
     .right {
@@ -303,39 +206,34 @@ footer {
         text-align: center;
     }
 
-    /* BRAND SIZE REDUCE */
     .brand {
         font-size: 28px;
     }
 
-    /* NAVBAR STACK */
     nav {
         flex-direction: column;
     }
 
     nav a {
+        width: 100%;
+        text-align: center;
         padding: 12px;
-        font-size: 16px;
     }
 
-    /* HERO TEXT */
     .hero h1 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .hero p {
         font-size: 14px;
     }
 
-    /* SERVICES GRID */
-    .services {
-        grid-template-columns: 1fr;
-    }
-
-    /* SLIDER IMAGES */
     .scroll-container img {
         width: 90%;
         height: 200px;
     }
 
+    .services {
+        grid-template-columns: 1fr;
+    }
 }
