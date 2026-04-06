@@ -35,6 +35,9 @@ nav a:hover {
 
 /* HERO */
 .hero {
+    padding: 80px 20px;
+}
+.hero {
     background: 
         linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
         url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') 
@@ -276,4 +279,63 @@ footer {
 .title {
     flex: 1;
     text-align: center;
+}
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    /* HEADER STACK */
+    .top-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .person {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .right {
+        justify-content: center;
+    }
+
+    .right .person-info {
+        text-align: center;
+    }
+
+    /* BRAND SIZE REDUCE */
+    .brand {
+        font-size: 28px;
+    }
+
+    /* NAVBAR STACK */
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* HERO TEXT */
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    /* SERVICES GRID */
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    /* SLIDER IMAGES */
+    .scroll-container img {
+        width: 90%;
+        height: 200px;
+    }
+
 }
